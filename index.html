@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Date for My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h3>❤️ Just For You</h3>
+    <span>Made with love</span>
+</header>
+
+<main>
+
+    <!-- WELCOME PAGE -->
+    <section id="welcome" class="page active">
+        <div class="heart">♥️</div>
+        <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+
+        <h1>
+            Welcome,<br>
+            <span>Miss Rachel Trixtina Johnson!</span>
+        </h1>
+
+        <p>
+            My beautiful love, I have prepared something special
+            just for you. You deserve happiness, beautiful moments,
+            and memories we will cherish forever.
+        </p>
+
+        <p>Are you ready, my love? 💌</p>
+
+        <button onclick="showPage('letter')">
+            Open Your Surprise ❤️
+        </button>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section id="letter" class="page">
+        <p class="eyebrow">A LETTER FROM MY HEART</p>
+
+        <h1>To My Beautiful Love 💌</h1>
+
+        <div class="letter">
+            <p>My beautiful Rachel,</p>
+
+            <p>
+                I may not always have the perfect words to express
+                how much you mean to me, but I want you to know
+                that you hold a special place in my heart.
+            </p>
+
+            <p>
+                I created this little surprise because I want us
+                to spend quality time together, laugh together,
+                and create beautiful memories.
+            </p>
+
+            <p>
+                Now, my love, the choice is yours.
+                Let's plan something beautiful together.
+            </p>
+
+            <h2>I love you! ❤️</h2>
+            <p>Your Man 💋</p>
+        </div>
+
+        <button onclick="showPage('choices')">
+            Let's Plan Our Date 💕
+        </button>
+
+        <button class="secondary" onclick="showPage('welcome')">
+            Go Back
+        </button>
+    </section>
+
+    <!-- DATE CHOICES -->
+    <section id="choices" class="page">
+        <p class="eyebrow">YOUR CHOICE, MY LOVE</p>
+
+        <h1>Let's Plan Our Special Date ❤️</h1>
+
+        <p>What would you like us to do together?</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">🍷</div>
+                <h2>Romantic Dinner</h2>
+                <p>
+                    Delicious food, beautiful surroundings,
+                    sweet conversations, and just the two of us.
+                </p>
+
+                <button onclick="openForm('Dinner')">
+                    Choose Dinner ❤️
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🧺</div>
+                <h2>Romantic Picnic</h2>
+                <p>
+                    Fresh air, lovely scenery, delicious treats,
+                    laughter, and unforgettable memories.
+                </p>
+
+                <button onclick="openForm('Picnic')">
+                    Choose Picnic 🌷
+                </button>
+            </div>
+
+        </div>
+
+        <button class="secondary" onclick="showPage('welcome')">
+            Back to Welcome
+        </button>
+    </section>
+
+    <!-- DINNER / PICNIC FORM -->
+    <section id="formPage" class="page">
+        <p class="eyebrow">MADE JUST FOR US</p>
+
+        <h1 id="formTitle">Let's Plan Our Date ❤️</h1>
+
+        <p>
+            Tell me what would make our special date perfect.
+        </p>
+
+        <form id="dateForm">
+
+            <input type="hidden" id="dateType" name="Date Type">
+
+            <label for="location">Preferred Location</label>
+            <select id="location" name="Preferred Location" required>
+                <option value="">Choose a location</option>
+            </select>
+
+            <label for="specificLocation">
+                Specific Restaurant or Place
+            </label>
+            <input
+                type="text"
+                id="specificLocation"
+                name="Specific Location"
+                placeholder="Enter a location if you have one"
+            >
+
+            <label for="food">What would you like to eat?</label>
+            <select id="food" name="Food" required>
+                <option value="">Choose your favourite food</option>
+                <option>Fried Rice and Chicken</option>
+                <option>Jollof Rice</option>
+                <option>Pizza</option>
+                <option>Burger and Fries</option>
+                <option>Grilled Fish</option>
+                <option>Pasta</option>
+                <option>Seafood</option>
+                <option>Traditional Sierra Leonean Food</option>
+                <option>Surprise Me</option>
+                <option>Other</option>
+            </select>
+
+            <label for="drink">What would you like to drink?</label>
+            <select id="drink" name="Drink" required>
+                <option value="">Choose a drink</option>
+                <option>Fruit Juice</option>
+                <option>Soft Drink</option>
+                <option>Water</option>
+                <option>Malt Drink</option>
+                <option>Mocktail</option>
+                <option>Surprise Me</option>
+                <option>Other</option>
+            </select>
+
+            <label for="dessert">Would you like dessert?</label>
+            <select id="dessert" name="Dessert">
+                <option value="">Choose if you want</option>
+                <option>Ice Cream</option>
+                <option>Cake</option>
+                <option>Chocolate</option>
+                <option>Fruit Salad</option>
+                <option>No Dessert</option>
+            </select>
+
+            <label for="activities">Activities or Music</label>
+            <select id="activities" name="Activities">
+                <option value="">Choose an activity</option>
+                <option>Romantic Music</option>
+                <option>Afrobeats</option>
+                <option>Taking Pictures</option>
+                <option>Playing Games</option>
+                <option>Watching the Sunset</option>
+                <option>Talking and Relaxing</option>
+                <option>Surprise Me</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="Preferred Date" required>
+
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="Preferred Time" required>
+
+            <label for="outfit">What would you like to wear?</label>
+            <select id="outfit" name="Outfit">
+                <option value="">Choose an outfit idea</option>
+                <option>Elegant Outfit</option>
+                <option>Smart Casual</option>
+                <option>Matching Outfits</option>
+                <option>Comfortable Outfit</option>
+                <option>Surprise Me</option>
+            </select>
+
+            <label for="requests">Special Requests</label>
+            <textarea
+                id="requests"
+                name="Special Requests"
+                rows="4"
+                placeholder="Tell me what would make our date special..."
+            ></textarea>
+
+            <button type="submit">
+                Review My Choices ❤️
+            </button>
+
+        </form>
+
+        <button class="secondary" onclick="showPage('choices')">
+            Back to Date Options
+        </button>
+    </section>
+
+    <!-- REVIEW PAGE -->
+    <section id="review" class="page">
+        <p class="eyebrow">JUST ONE LAST LOOK</p>
+        <h1>Your Date, Your Way 💕</h1>
+
+        <p>Check your choices before sending them to me.</p>
+
+        <div id="summary" class="summary"></div>
+
+        <button onclick="sendDatePlan()">
+            Send My Date Plan ❤️
+        </button>
+
+        <button class="secondary" onclick="showPage('formPage')">
+            Edit My Choices
+        </button>
+
+        <p id="status"></p>
+    </section>
+
+    <!-- SUCCESS PAGE -->
+    <section id="success" class="page">
+        <div class="heart">♥️</div>
+
+        <h1>You've Made My Heart Smile! ❤️</h1>
+
+        <p>
+            Thank you for choosing our special date,
+            Miss Rachel Trixtina Johnson.
+        </p>
+
+        <p>
+            I can't wait to spend this beautiful moment with you.
+            What matters most to me is being with you, making you
+            smile, and creating memories together.
+        </p>
+
+        <h2>You Are Loved and Cherished! 💋</h2>
+
+        <p>With all my love,<br><strong>Your Man ❤️</strong></p>
+
+        <button onclick="showPage('welcome')">
+            Back to the Beginning
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    Made with love, just for Rachel ❤️
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
